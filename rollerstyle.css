@@ -1,0 +1,84 @@
+/* font-family: 'Josefin Sans', sans-serif;
+
+    IDs:
+    id="logo"
+    id="roll"
+    id="cube"
+    id="calc"
+    id="body"
+    
+    
+    NAMES: 
+    
+    
+    CLASSES: 
+    class="menuButton"
+    class="dumbBanner"
+    class="mainText"
+    class="mainPic"
+    class="flexCentered"
+    */
+#body {
+
+    background-image: url(Res/blya.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size:100%;
+
+}
+
+#cube {
+    width:75%;
+    height:75%;
+}
+.flexCentered {
+    display: flex;
+    justify-content: center;
+}
+.flexCenteredMarginTop {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5em;
+}
+.borderedPurp {
+    border:solid;
+    border-radius: 2em;
+    border-width: 0.3em;
+    border-color: #9b25c9;
+    padding:0.2em
+}
+/*.rainbow-box {
+    width: 7.5vw;
+    height: 100vh;
+    border-radius: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+}
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+*/
+/* #logo {}
+#roll {}
+
+#calc {}
+
+
+.menuButton {}
+.dumbBanner {}
+.mainText {}
+
+
+
+*/
