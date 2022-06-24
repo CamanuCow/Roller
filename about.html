@@ -7,14 +7,31 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-
+            <script src="rollerjs.js"></script>
+            
         </head>
         <body id="body" style="text-align:center">
 
-            <h1>Nothing here yet <a href="index.html">Go back</a></h1>
+            <h1>Test page. Try out the current version of the calculator.<br> Many improvements soon... <a href="index.html">Go back</a></h1>
 
 
+            <div class="flexCenteredMarginTop">
+                <div>
+                    <button onclick="getRandomIntInclusive(1, 6); changeImg();" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                </div>
+            </div>
+            <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
+                
+                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> NOT IMPLEMENTED YET :D</p>
+            
 
+                <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label>
+                <select style="" name="operSelect" ondblclick="updateOp(this.value);">
+                    <option value="null">Choose operator</option>
+                    <option value="+">+</option>
+                    <option value="*">*</option>
+                </select>
+            </div>
 
         </body>
     </html>
