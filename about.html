@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title>RollerEXP</title>
+            <title>'Bout</title>
             <link href="rollerstyle.css" rel="stylesheet">
             <!-- font-family: 'Josefin Sans', sans-serif; -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,15 +22,32 @@
             </div>
             <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
                 
-                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> NOT IMPLEMENTED YET :D</p>
+                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> FUCK ME I WON</p>
             
 
-                <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label>
-                <select style="" name="operSelect" ondblclick="updateOp(this.value);">
+
+            </div>
+
+            <div class="flexCenteredMarginTop">
+
+                <p id="firstNumber" style="margin:1em">Your roll will be here </p>
+                <p id="znak" style="margin:1em">Your operator will be here </p>
+                <p id="secondNumber" style="margin:1em">Your input will be here </p>
+                <p>=</p>
+                <p id="end" style="margin:1em">Your result will be here</p>
+
+                <button onclick="getRandomIntInclusive(1, 6);">ROLLLLLL</button>
+                
+                <!-- <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label> -->
+                <select name="operSelect" onchange="updateOp(this.value);">
                     <option value="null">Choose operator</option>
                     <option value="+">+</option>
                     <option value="*">*</option>
                 </select>
+                
+                <button onclick="changeSecondNumber();">CLICK TO DO 10</button>
+                
+                <button onclick="addValues();">CLICK FOR RESULT</button>
             </div>
 
         </body>
