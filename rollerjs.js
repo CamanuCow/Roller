@@ -8,7 +8,7 @@ function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     Jopa = Math.floor(Math.random() * (max - min + 1) + min);
-    document.getElementById("firstNumber").innerHTML = Jopa
+    
     var img = document.getElementById("cube");
     if (Jopa == 1) {
         img.src = "Res/Side1D6.png";
@@ -28,6 +28,7 @@ function getRandomIntInclusive(min, max) {
     else if (Jopa == 6) {
         img.src = "Res/Side6D6.png";
     }
+    document.getElementById("firstNumber").innerHTML = Jopa
     return Jopa;
     
 }
@@ -46,10 +47,13 @@ function updateOp(val) {
         return sign
        // document.getElementById("result").innerHTML = "Your result: "+ (numero * 10);
     }
+    else if (val === "null") {
+        document.getElementById("znak").innerHTML = "& Operator &"
+    }
 }
 // RUN WHEN INPUT ENTERED
-function changeSecondNumber() {
-    var vvod = 10 //user input
+function changeSecondNumber(chislo) {
+    vvod = chislo //user input
     document.getElementById("secondNumber").innerHTML = vvod
 }
 //RUN WHEN BUTTON FOR RESULT PRESSED
@@ -57,12 +61,12 @@ function addValues() {
 
     if (sign == "+") {
         var numero = Jopa;
-        var customNumber = 10//user input
+        var customNumber = parseInt(vvod)//user input
         var gavno = (numero + customNumber);
         document.getElementById("end").innerHTML = gavno}
     if (sign == "*") {
         var numero = Jopa;
-        var customNumber = 10 //user input
+        var customNumber = parseInt(vvod) //user input
         var eblan = (numero * customNumber);
         document.getElementById("end").innerHTML = eblan
         }
