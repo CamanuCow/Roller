@@ -98,7 +98,7 @@
 }
 #operSelect {
     margin:2%;
-    height:20%;
+    height:100%;
     width:60%;
     border-radius:10%;
     background: radial-gradient(circle,#edfaf4 60%, #9b25c9 100%);

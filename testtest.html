@@ -17,12 +17,12 @@
 
             <div class="flexCenteredMarginTop">
                 <div>
-                    <button onclick="getRandomIntInclusive(1, 6); changeImg();" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                    <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
                 </div>
             </div>
             <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
                 
-                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> FUCK ME I WON</p>
+                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> Roll by clicking </p>
             
             </div>
 
@@ -49,11 +49,19 @@
                     </div>
                 </div>
                 <div class="controls">
-                    <select name="operSelect" onchange="updateOp(this.value);" id="operSelect">
-                        <option value="null">+ or *</option>
-                        <option value="+">+</option>
-                        <option value="*">*</option>
-                    </select>
+                    <div style="display:flex; flex-direction:row;">
+                        <button onclick="getRandomIntInclusive(1, 6);" style="margin:2%;    border-radius:10%;
+                        background: radial-gradient(circle,#0dee85 0%, #9b25c9 100%);
+                        border:2%;
+                        border-color:gray;
+                        font-weight:bolder;
+                        color:aliceblue; height:100%">Roll</button>
+                        <select name="operSelect" onchange="updateOp(this.value);" id="operSelect">
+                            <option value="null">+ or *</option>
+                            <option value="+">+</option>
+                            <option value="*">*</option>
+                        </select>
+                    </div>
                     <input type="number" min="0" onchange="changeSecondNumber(this.value);" id="inputted">
                     
                     <button id="resultat" onclick="addValues();">RESULT</button>
