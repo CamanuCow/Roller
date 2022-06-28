@@ -17,13 +17,20 @@
     class="mainText"
     class="mainPic"
     class="flexCentered"
-    */
-#why {
+    #why {
     height:100%;
     min-height: 100%;
-}
+    }
+    */
+
 
 #body {
+    border:0;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+#ultraBox {
     background-image:linear-gradient(
         90deg,
         rgba(255, 0, 0, 1) 0%,
