@@ -29,6 +29,7 @@ function getRandomIntInclusive(min, max) {
         img.src = "Res/Side6D6.png";
     }
     document.getElementById("firstNumber").innerHTML = Jopa
+    document.getElementById("end").innerHTML = "Result"
     return Jopa;
     
 }
@@ -36,6 +37,7 @@ function getRandomIntInclusive(min, max) {
 function updateOp(val) {
     if (val === "+") {
         document.getElementById("znak").innerHTML = "+"
+        document.getElementById("end").innerHTML = "Result"
         sign = "+"
         return sign
        // document.getElementById("result").innerHTML = "Your result: "+ (10 + numero);
@@ -43,18 +45,21 @@ function updateOp(val) {
     }
     else if (val === "*"){
         document.getElementById("znak").innerHTML = "*"
+        document.getElementById("end").innerHTML = "Result"
         sign = "*"
         return sign
        // document.getElementById("result").innerHTML = "Your result: "+ (numero * 10);
     }
     else if (val === "null") {
         document.getElementById("znak").innerHTML = "& Operator &"
+        document.getElementById("end").innerHTML = "Result"
     }
 }
 // RUN WHEN INPUT ENTERED
 function changeSecondNumber(chislo) {
     vvod = chislo //user input
     document.getElementById("secondNumber").innerHTML = vvod
+    document.getElementById("end").innerHTML = "Result"
 }
 //RUN WHEN BUTTON FOR RESULT PRESSED
 function addValues() {
