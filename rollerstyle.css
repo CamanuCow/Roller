@@ -17,18 +17,16 @@
     class="mainText"
     class="mainPic"
     class="flexCentered"
-
-    */
-
 #why {
     height:100%;
 }
+
+    */
 #body {
     border:0;
     margin:0;
     padding:0;
     text-align: center;
-    min-height: 100vh;
 }
 #ultraBox {
     background-image:linear-gradient(
@@ -44,13 +42,15 @@
         rgba(186, 12, 248, 1) 80%,
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%);
-    background-size: 5% 100%;
+    background-size: 5%;
     background-repeat:repeat;
     border:0;
     margin:0;
     padding:0;
     height: 100%;
     width:100%;
+    display:flex;
+    align-items:center;
 }
 #gigaBox {
     display:flex;
@@ -59,7 +59,7 @@
     margin-right:auto;
     width:90%;
     height:100%;
-    min-height: 100%;
+    max-height: 100%;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     
