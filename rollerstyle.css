@@ -32,14 +32,15 @@
         rgba(186, 12, 248, 1) 80%,
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%);
-    background-size: 5%;
+    background-size:5% 100%;
     background-repeat:repeat-x;
     border:0;
     margin:0;
     padding:0;
     display:flex;
     justify-content:center;
-    text-align:center
+    text-align:center;
+    height:available;
 }
 #gigaBox {
     display:flex;
