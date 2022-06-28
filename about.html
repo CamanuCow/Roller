@@ -10,54 +10,54 @@
             <script src="rollerjs.js"></script>
             
         </head>
-        <body id="body" style="text-align:center">
+        <body id="body">
+            <div id="gigaBox">
+                <h1>Test page. Try out the current version of the calculator.<br> Many improvements soon... <a href="index.html">Go back</a></h1>
 
-            <h1>Test page. Try out the current version of the calculator.<br> Many improvements soon... <a href="index.html">Go back</a></h1>
 
-
-            <div class="flexCenteredMarginTop">
-                <div>
-                    <button onclick="getRandomIntInclusive(1, 6); changeImg();" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                <div class="flexCenteredMarginTop">
+                    <div>
+                        <button onclick="getRandomIntInclusive(1, 6); changeImg();" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                    </div>
                 </div>
-            </div>
-            <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
+                <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
+                    
+                    <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> FUCK ME I WON</p>
                 
-                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> FUCK ME I WON</p>
-            
-            </div>
-
-            <div class="flexCenteredMarginTop">
-
-                <p id="firstNumber" class="display">Main roll</p>
-                <p id="znak" class="display">Operator</p>
-                <p id="secondNumber" class="display">Input</p>
-                <p class="display">=</p>
-                <p id="end" class="display">Result</p>
-
-                <button onclick="getRandomIntInclusive(1, 6);">ROLLLLLL</button>
-                
-                <!-- <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label> -->
-                <select name="operSelect" onchange="updateOp(this.value);">
-                    <option value="null">Choose operator</option>
-                    <option value="+">+</option>
-                    <option value="*">*</option>
-                </select>
-                
-                <!-- <button onchange="changeSecondNumber();">CLICK TO DO 10</button> -->
-                <label>Your input:</label>
-                <input type="number" min="0" onchange="changeSecondNumber(this.value);">
-                
-                <button onclick="addValues();">CLICK FOR RESULT</button>
-            </div>
-
-
-            <div class="biggerBox">
-                <div class="smallerBox">
-                    <div><p>I hope it worked</p></div>
                 </div>
+
+                <div class="flexCenteredMarginTop">
+
+                    <p id="firstNumber" class="display">Main roll</p>
+                    <p id="znak" class="display">Operator</p>
+                    <p id="secondNumber" class="display">Input</p>
+                    <p class="display">=</p>
+                    <p id="end" class="display">Result</p>
+
+                    <button onclick="getRandomIntInclusive(1, 6);">ROLLLLLL</button>
+                    
+                    <!-- <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label> -->
+                    <select name="operSelect" onchange="updateOp(this.value);">
+                        <option value="null">Choose operator</option>
+                        <option value="+">+</option>
+                        <option value="*">*</option>
+                    </select>
+                    
+                    <!-- <button onchange="changeSecondNumber();">CLICK TO DO 10</button> -->
+                    <label>Your input:</label>
+                    <input type="number" min="0" onchange="changeSecondNumber(this.value);">
+                    
+                    <button onclick="addValues();">CLICK FOR RESULT</button>
+                </div>
+
+
+                <div class="biggerBox">
+                    <div class="smallerBox">
+                        <div><p>I hope it worked</p></div>
+                    </div>
+                </div>
+
+                <p style="font-weight:bolder;font-size: 2em;">Go <a href="testtest.html" title="secret page">here</a> to check the most experimental work</p>
             </div>
-
-            <p style="font-weight:bolder">Go <a href="testtest.html" title="secret page">here</a> to check the most experimental work</p>
-
         </body>
     </html>

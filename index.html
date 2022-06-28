@@ -10,47 +10,49 @@
             <script src="rollerjs.js"></script>
         </head>
         <body id="body">
-            <div class="flexCentered" style="flex-direction:row;  align-items:center; width:100%"> 
-                <div class="menuButton" class="flexCentered">
-                    <button onclick="dota();" style="background-image: radial-gradient(circle, #29b3dd 0%, #9b25c9 100%);border:0; border-radius: 1.5em; height:2.5em"><span style="font-weight:bolder; color:aliceblue">Click me</span></button>
+            <div id="gigaBox">
+                <div class="flexCentered" style="flex-direction:row;  align-items:center; width:100%"> 
+                    <div class="menuButton" style="border-radius: 1.5em 0 0 1.5em;">
+                        <button onclick="dota();"class="menuButtonText">Get rolling</button>
+                    </div>
+
+                    <div id="logo" class="flexCentered" class="borderedPurp" style="width:10em;" >
+                        <img src="Res/LogoRoller2.png" title="Logo" alt="Xyerror" class="flexCentered" style="width:80%; height:80%;" >
+                    </div>
+
+                    <div class="menuButton" style="border-radius:0 1.5em 1.5em 0;" >
+                        <a href="about.html" title="Learn more!" class="menuButtonText">Learn more</a>
+                    </div>
+                </div>
+                <div class="flexCentered" style="flex-direction:row;  margin-top: 5em; flex-wrap: nowrap;">
+                    <div style="margin-left:1.5em;" class="flexCentered">
+                        <img src="Res/DiceMany.png" style="width:10em;height:10em">
+                    </div>
+
+                    <div style="display:flex; align-items: center; width:16em; height:10em;flex-shrink:4; margin-left:1.5em;margin-bottom:1.5em">
+                        <p style="text-align: center; font-weight:bolder; color:rgb(22, 3, 102); line-height: 1.8">Here you can roll the six-sided die<br>
+                        To roll just press the "Roll" button<br>
+                        Or just press on the die itself<br>
+                        The result will be shown on the die<br>
+                        <i>Incoming feature: calculator</i></p>
+                    </div>
                 </div>
 
-                <div id="logo" class="flexCentered" class="borderedPurp" style="width:10em; margin:1em; margin-top:0" >
-                    <img src="Res/FooneyFace.png" title="Logo" alt="Xyerror" class="flexCentered" style="width:100%; height:100%;" >
+                <div id="roll" class="flexCenteredMarginTop">
+                    <button onclick="getRandomIntInclusive(1, 6);" class="borderedPurp" style="background-image: radial-gradient(circle, #29b3dd 0%, #9b25c9 100%);border:0; border-radius: 1.5em; padding:1em"><span style="font-weight:bolder; color:aliceblue; font-size: 4em;"> Roll! </span></button>
                 </div>
-
-                <div class="menuButton" class="flexCentered" >
-                    <div><a href="about.html" title="Learn more!"style="text-decoration: none;background-image: radial-gradient(circle, #29b3dd 0%, #9b25c9 100%);border:0; border-radius: 1.5em; padding:.5em;"><span style="font-weight:bolder; color:aliceblue">About</span></a></div>
+                <div class="flexCenteredMarginTop">
+                    <div>
+                        <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                    </div>
                 </div>
-            </div>
-            <div class="flexCentered" style="flex-direction:row;  margin-top: 5em; flex-wrap: nowrap;">
-                <div style="margin-left:1.5em;" class="flexCentered">
-                    <img src="Res/pexels-ravi-roshan-7517594.jpg" style="width:7em;height:10em">
-                </div>
-
-                <div style="display:flex; align-items: center; width:16em; height:10em;flex-shrink:4; margin-left:1.5em;margin-bottom:1.5em">
-                    <p style="text-align: center; font-weight:bolder; color:rgb(22, 3, 102); line-height: 1.8">Here you can roll the six-sided die<br>
-                    To roll just press the "Roll" button<br>
-                    Or just press on the die itself<br>
-                    The result will be shown on the die<br>
-                    <i>Incoming feature: calculator</i></p>
-                </div>
-            </div>
-
-            <div id="roll" class="flexCenteredMarginTop">
-                 <button onclick="getRandomIntInclusive(1, 6);" class="borderedPurp" style="background-image: radial-gradient(circle, #29b3dd 0%, #9b25c9 100%);border:0; border-radius: 1.5em; padding:1em"><span style="font-weight:bolder; color:aliceblue; font-size: 4em;"> Roll! </span></button>
-            </div>
-            <div class="flexCenteredMarginTop">
-                <div>
-                    <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
-                </div>
-            </div>
-            
-            <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
                 
-                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> Check<a href="about.html" title="Learn more!"style="text-decoration: none;border:0; border-radius: 1.5em; padding:.5em;"><span style="font-weight:bolder; color:rgb(80, 54, 248)">"About"</span></a>page</p>
-            </div>
-        
+                <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
+                    
+                    <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> Check<a href="about.html" title="Learn more!"style="text-decoration: none;border:0; border-radius: 1.5em; padding:.5em;"><span style="font-weight:bolder; color:rgb(80, 54, 248)">"About"</span></a>page</p>
+                </div>
+            </div>    
+            </body>
         </body>
 
 

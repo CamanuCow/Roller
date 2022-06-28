@@ -10,65 +10,60 @@
             <script src="rollerjs.js"></script>
             
         </head>
-        <body id="body" style="text-align:center">
-
-            <h1>Test page. Try out the current version of the calculator.<br> Many improvements soon... <a href="index.html">Go back</a></h1>
-
-
-            <div class="flexCenteredMarginTop">
-                <div>
-                    <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
-                </div>
-            </div>
-            <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
-                
-                <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> Roll by clicking </p>
-            
-            </div>
-
-            <div class="flexCenteredMarginTop">
+        <body id="body">
+            <div id="gigaBox">
+                <h1>Test page. Try out the current version of the calculator.<br> Many improvements soon... <a href="index.html">Go back</a></h1>
 
 
-            </div>
-
-
-        <div class="forCalc">
-            <div class="biggerBox">
-                <div class="smallerBox">
-                    <div style="display:flex; justify-content:center; align-items:center; height:100%;width:100%;flex-wrap: wrap;">
-                        <p id="firstNumber" class="display">Roll</p>
-                        <p id="znak" class="display">& Operator &</p>
-                        <p id="secondNumber" class="display">Number</p>
-                        <p class="display">=</p>
-                        <p id="end" class="display">Result</p>
-                        
-                        <!-- <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label> -->
-                        <!-- <button onchange="changeSecondNumber();">CLICK TO DO 10</button> 
-                        <button onclick="getRandomIntInclusive(1, 6);">ROLLLLLL</button>-->
-
+                <div class="flexCenteredMarginTop">
+                    <div>
+                        <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
                     </div>
                 </div>
-                <div class="controls">
-                    <div style="display:flex; flex-direction:row;">
-                        <button onclick="getRandomIntInclusive(1, 6);" style="margin:2%;    border-radius:10%;
-                        background: radial-gradient(circle,#0dee85 0%, #9b25c9 100%);
-                        border:2%;
-                        border-color:gray;
-                        font-weight:bolder;
-                        color:aliceblue; height:100%">Roll</button>
-                        <select name="operSelect" onchange="updateOp(this.value);" id="operSelect">
-                            <option value="null">+ or *</option>
-                            <option value="+">+</option>
-                            <option value="*">*</option>
-                        </select>
-                    </div>
-                    <input type="number" min="0" onchange="changeSecondNumber(this.value);" id="inputted">
+                <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
                     
-                    <button id="resultat" onclick="addValues();">RESULT</button>
+                    <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong><br> Roll by clicking the die above or the "Roll" button below<br>Choose an operator<br>Enter your number<br>Press "Calculate" to see the result!</p>
+                
+                </div>
+
+                <div class="flexCenteredMarginTop">
+
 
                 </div>
+
+
+                <div class="forCalc">
+                    <div class="biggerBox">
+                        <div class="smallerBox">
+                            <div style="display:flex; justify-content:center; align-items:center; height:100%;width:100%;flex-wrap: wrap;">
+                                <p id="firstNumber" class="display">Roll</p>
+                                <p id="znak" class="display">& Operator &</p>
+                                <p id="secondNumber" class="display">Number</p>
+                                <p class="display">=</p>
+                                <p id="end" class="display">Result</p>
+                                
+                                <!-- <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label> -->
+                                <!-- <button onchange="changeSecondNumber();">CLICK TO DO 10</button> 
+                                <button onclick="getRandomIntInclusive(1, 6);">ROLLLLLL</button>-->
+
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <div style="display:flex; flex-direction:row; justify-content:center; width:95%">
+                                <button onclick="getRandomIntInclusive(1, 6);" id="additionalRoll">Roll</button>
+                                <select name="operSelect" onchange="updateOp(this.value);" id="operSelect">
+                                    <option value="null">? ? ?</option>
+                                    <option value="+">+</option>
+                                    <option value="*">*</option>
+                                </select>
+                            </div>
+                            <input type="number" min="0" onchange="changeSecondNumber(this.value);" id="inputted">
+                            
+                            <button id="resultat" onclick="addValues();">CALCULATE</button>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
         </body>
     </html>

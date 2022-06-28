@@ -19,17 +19,60 @@
     class="flexCentered"
     */
 #body {
-
-    background-image: url(Res/blya.jpg);
-    background-position: center;
-    background-repeat: repeat;
-    background-size:100%;
-
+    background-image:linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%);
+    background-size: 5% 100%;
+    background-repeat:repeat-x;
+    border:0;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    text-align:center
+}
+#gigaBox {
+    display:flex;
+    flex-direction:column;
+    width:90%;
+    height:100%;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding: 0.2em;
 }
 
 #cube {
     width:75%;
     height:75%;
+}
+.menuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:10em;
+    height:4.4em;
+    background-image: radial-gradient(circle, #29b3dd 0%, #9b25c9 100%);
+    border:0;
+
+}
+.menuButtonText {
+    font-weight:bolder;
+    font-size:1.5em;
+    color:aliceblue;
+    font-family:Josefin sans, sans-serif;
+    text-decoration: none;
+    background:none;
+    border:0
 }
 .flexCentered {
     display: flex;
@@ -65,7 +108,9 @@
     justify-content:flex-start;
     align-items: center;
     height:30vh;
+    min-height:13em;
     width:60vw;
+    min-width:25em;
     border-radius:2em;
     background: radial-gradient(circle, rgb(71, 211, 243) 0%, rgb(195, 66, 241) 100%)
 }
@@ -99,7 +144,7 @@
 #operSelect {
     margin:2%;
     height:100%;
-    width:60%;
+    width:40%;
     border-radius:10%;
     background: radial-gradient(circle,#edfaf4 60%, #9b25c9 100%);
     border:2%;
@@ -107,6 +152,20 @@
     font-weight:bolder;
     color:rgb(0, 0, 0);
     text-align:center;
+}
+#additionalRoll {
+    margin:2%;
+    height:100%;
+    
+    width:40%;
+    border-radius:10%;
+    background: radial-gradient(circle,#0dee85 0%, #9b25c9 100%);
+    border:2%;
+    border-color:gray;
+    font-weight:bolder;
+    color:rgb(0, 0, 0);
+    text-align:center;
+    color:aliceblue;
 }
 
 #inputted {
@@ -129,7 +188,8 @@
     flex-wrap: wrap;
     margin:2%;
     height:3em;
-    width:5em;
+    width:40%;
+    min-width:6.8em;
     border-radius:10%;
     background: radial-gradient(circle,#0dee85 0%, #9b25c9 100%);
     border:2%;
@@ -171,4 +231,9 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
 
 margin:1em; font-family: Josefin sans, sans-serif; font-weight: bolder; font-size: 1.5em;
 
+
+background-image: url(Res/blya.jpg);
+background-position: center;
+background-repeat: repeat;
+background-size:100%;
 */
