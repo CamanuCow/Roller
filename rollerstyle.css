@@ -44,8 +44,8 @@
 }
 
 #cube {
-    width:75%;
-    height:75%;
+    width:25em;
+    height:25em;
 }
 .buttons {
     display: flex;
@@ -57,12 +57,14 @@
     box-shadow: 0 0 0.5em rgb(25, 25, 25);
     border:solid 0.1em;
     border-color: rgba(0, 0, 0,50%);
+    cursor: pointer;
 }
 #menuButtonR {
     border-radius:0 2.5em 2.5em 0;
 }
 #menuButtonL {
     border-radius: 2.5em 0 0 2.5em;
+    
 
 }
 #menuButtonTextR {
@@ -72,7 +74,8 @@
     font-family:Josefin sans, sans-serif;
     text-decoration: none;
     background:none;
-    border:0
+    border:0;
+    
 }
 #menuButtonTextL {
     font-weight:bolder;
@@ -81,7 +84,10 @@
     font-family:Josefin sans, sans-serif;
     text-decoration: none;
     background:none;
-    border:0
+    border:0;
+    width:10em;
+    height:3.3em;
+    cursor: pointer;
 }
 #rollButton {
     border-radius: 1.5em;
@@ -93,7 +99,10 @@
     font-family:Josefin sans, sans-serif;
     text-decoration: none;
     background:none;
-    border:0
+    border:0;
+    width:10em;
+    height:1.5em;
+    cursor: pointer;
 }
 .flexCentered {
     display: flex;
@@ -128,9 +137,9 @@
     flex-direction: row;
     justify-content:flex-start;
     align-items: center;
-    height:30vh;
-    min-height:13em;
-    width:60vw;
+    height:13em;
+    min-height:8em;
+    width:50vw;
     min-width:25em;
     border-radius:2em;
     background:black;

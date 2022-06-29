@@ -1,6 +1,6 @@
 function dota() {
-    const element = document.getElementById("calc");
-    element.scrollIntoView(false);
+    const element = document.getElementById("rollButtonText");
+    element.scrollIntoView(true);
 }
 
 

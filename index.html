@@ -25,28 +25,27 @@
                     </div>
                 </div>
                 <!-- Total chaos here, do CSS -->
-                <div style="display:flex; justify-content:center; align-items:center; flex-direction:row; margin-top:4em; margin-bottom:1.5em; flex-wrap: nowrap; width:100%; height:60%">
+                <div style="display:flex; justify-content:center; align-items:center; flex-direction:row;  margin-top:4em; margin-bottom:1.5em; flex-wrap: nowrap; width:100%; height:60%">
                         <ul style="font-size:2em;text-align: left; font-weight:bolder; color:rgb(22, 3, 102); line-height: 1.5em;">
                             <li>Here you can roll the six-sided die</li>
                             <li>To roll just press the "Roll" button</li>
                             <li>Or just press on the die itself</li>
                             <li>The result will be shown on the die</li>
                             <li>Make sure to check out he calculator below</li>
+                            <li>If you've read this, click <span onclick="dota();" style="color:aliceblue;background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);border-radius: 10px;cursor: pointer;">"Get rolling"</span><br>above to get to action</li>
                         </ul>
                 </div>
 
                 <div id="rollButton" class="buttons">
                     <button onclick="getRandomIntInclusive(1, 6);" id="rollButtonText">Roll</button>
                 </div>
-                <div class="flexCenteredMarginTop">
-                    <div>
-                        <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
-                    </div>
+                <div  id="calc" class="flexCenteredMarginTop">
+                        <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0;cursor: pointer;padding:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
                 </div>
                 
-                <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column; text-align: left">     
+                <div style="display:flex; justify-content:center;align-items:center;flex-direction:column; text-align: left; margin:0.5em">     
                     <p style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong>
-                        <ol style="font-size:larger; font-weight:bolder">
+                        <ol style="font-size:larger; font-weight:bolder;margin:0">
                             <li>Roll by clicking the die above or the "Roll" button below</li>
                             <li>Choose an operator</li>
                             <li>Enter your number</li>
