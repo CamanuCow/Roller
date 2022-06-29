@@ -10,51 +10,83 @@
             <script src="rollerjs.js"></script>
         </head>
         <body id="body">
-            <div id="ultraBox">
-                <div id="gigaBox">
-                    <div class="flexCentered" style="flex-direction:row;  align-items:center; width:100%"> 
-                        <div class="menuButton" style="border-radius: 1.5em 0 0 1.5em;">
-                            <button onclick="dota();"class="menuButtonText">Get rolling</button>
-                        </div>
-
-                        <div id="logo" class="flexCentered" class="borderedPurp" style="width:10em;" >
-                            <img src="Res/LogoRoller2.png" title="Logo" alt="Xyerror" class="flexCentered" style="width:80%; height:80%;" >
-                        </div>
-
-                        <div class="menuButton" style="border-radius:0 1.5em 1.5em 0;" >
-                            <a href="about.html" title="Learn more!" class="menuButtonText">Learn more</a>
-                        </div>
-                    </div>
-                    <div class="flexCentered" style="flex-direction:row;  margin-top: 5em; flex-wrap: nowrap;">
-                        <div style="margin-left:1.5em;" class="flexCentered">
-                            <img src="Res/DiceMany.png" style="width:10em;height:10em">
-                        </div>
-
-                        <div style="display:flex; align-items: center; width:16em; height:10em;flex-shrink:4; margin-left:1.5em;margin-bottom:1.5em">
-                            <p style="text-align: center; font-weight:bolder; color:rgb(22, 3, 102); line-height: 1.8">Here you can roll the six-sided die<br>
-                            To roll just press the "Roll" button<br>
-                            Or just press on the die itself<br>
-                            The result will be shown on the die<br>
-                            <i>Incoming feature: calculator</i></p>
-                        </div>
+            <div id="gigaBox">
+                <div class="flexCentered" style="flex-direction:row;  align-items:center; width:100%"> 
+                    <div id="menuButtonL" class="buttons">
+                        <button onclick="dota();"id="menuButtonTextL">Get rolling</button>
                     </div>
 
-                    <div id="roll" class="flexCenteredMarginTop">
-                        <button onclick="getRandomIntInclusive(1, 6);" class="borderedPurp" style="background-image: radial-gradient(circle, #29b3dd 0%, #9b25c9 100%);border:0; border-radius: 1.5em; padding:1em"><span style="font-weight:bolder; color:aliceblue; font-size: 4em;"> Roll! </span></button>
+                    <div id="logo" class="flexCentered" style="width:10em;" >
+                        <img src="Res/LogoRoller2.png" title="Logo" alt="Xyerror" class="flexCentered" style="width:80%; height:80%;" >
                     </div>
-                    <div class="flexCenteredMarginTop">
-                        <div>
-                            <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+
+                    <div id="menuButtonR" class="buttons">
+                        <a href="about.html" title="Learn more!" id="menuButtonTextR">Learn more</a>
+                    </div>
+                </div>
+                <!-- Total chaos here, do CSS -->
+                <div style="display:flex; justify-content:center; align-items:center; flex-direction:row;  margin:5em; flex-wrap: nowrap; width:100%; height:60%">
+                        <ul style="font-size:2em;text-align: left; font-weight:bolder; color:rgb(22, 3, 102); line-height: 1.5em;">
+                            <li>Here you can roll the six-sided die</li>
+                            <li>To roll just press the "Roll" button</li>
+                            <li>Or just press on the die itself</li>
+                            <li>The result will be shown on the die</li>
+                            <li>Make sure to check out he calculator below</li>
+                        </ul>
+                </div>
+
+                <div id="rollButton" class="buttons">
+                    <button onclick="getRandomIntInclusive(1, 6);" id="rollButtonText">Roll</button>
+                </div>
+                <div class="flexCenteredMarginTop">
+                    <div>
+                        <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                    </div>
+                </div>
+                
+                <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column; text-align: left">     
+                    <p style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong>
+                        <ol style="font-size:larger; font-weight:bolder">
+                            <li>Roll by clicking the die above or the "Roll" button below</li>
+                            <li>Choose an operator</li>
+                            <li>Enter your number</li>
+                            <li>Press "Calculate" to see the result!</li>
+                        </ol>
+                </div>
+
+                <div class="forCalc">
+                    <div class="biggerBox">
+                        <div class="smallerBox">
+                            <div style="display:flex; justify-content:center; align-items:center; height:100%;width:100%;flex-wrap: wrap;margin:3%">
+                                <p id="firstNumber" class="display">Roll</p>
+                                <p id="znak" class="display">& Operator &</p>
+                                <p id="secondNumber" class="display">Number</p>
+                                <p class="display">=</p>
+                                <p id="end" class="display">Result</p>
+                                
+                                <!-- <label>Select an operator and Double-click the selector (if "+" chosen, then "roll+10"; if "*" chosen, then "roll*10")</label> -->
+                                <!-- <button onchange="changeSecondNumber();">CLICK TO DO 10</button> 
+                                <button onclick="getRandomIntInclusive(1, 6);">ROLLLLLL</button>-->
+
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div id="calc" class="flexCenteredMarginTop" style="align-items:center;flex-direction:column">
-                        
-                        <p id="result" style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong> Check<a href="about.html" title="Learn more!"style="text-decoration: none;border:0; border-radius: 1.5em; padding:.5em;"><span style="font-weight:bolder; color:rgb(80, 54, 248)">"About"</span></a>page</p>
+                        <div class="controls">
+                            <div style="display:flex; flex-direction:row; justify-content:center; width:95%">
+                                <button onclick="getRandomIntInclusive(1, 6);" id="additionalRoll">Roll</button>
+                                <select name="operSelect" onchange="updateOp(this.value);" id="operSelect">
+                                    <option value="null">? ? ?</option>
+                                    <option value="+">+</option>
+                                    <option value="*">*</option>
+                                </select>
+                            </div>
+                            <input type="number" min="0" onchange="changeSecondNumber(this.value);" id="inputted">
+                            
+                            <button id="resultat" onclick="addValues();">CALCULATE</button>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            </body>
         </body>
 
 

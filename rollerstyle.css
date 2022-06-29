@@ -1,35 +1,8 @@
-/* font-family: 'Josefin Sans', sans-serif;
-
-    IDs:
-    id="logo"
-    id="roll"
-    id="cube"
-    id="calc"
-    id="body"
-    
-    
-    NAMES: 
-    
-    
-    CLASSES: 
-    class="menuButton"
-    class="dumbBanner"
-    class="mainText"
-    class="mainPic"
-    class="flexCentered"
-#why {
-    height:100%;
-}
-
-    */
 #body {
-    border:0;
     margin:0;
     padding:0;
     text-align: center;
-}
-#ultraBox {
-    background-image:linear-gradient(
+    background:linear-gradient(
         90deg,
         rgba(255, 0, 0, 1) 0%,
         rgba(255, 154, 0, 1) 10%,
@@ -42,46 +15,80 @@
         rgba(186, 12, 248, 1) 80%,
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%);
-    background-size: 5%;
+    background-size: 5% 100%;
     background-repeat:repeat;
+    font-family:Josefin sans, sans-serif;
+
+}
+#ultraBox {
+
     border:0;
     margin:0;
     padding:0;
     height: 100%;
     width:100%;
-    display:flex;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+
 }
 #gigaBox {
     display:flex;
     flex-direction:column;
+    align-items: center;
     margin-left:auto;
     margin-right:auto;
     width:90%;
     height:100%;
-    max-height: 100%;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    
+    background: #A770EF;  /* fallback for old browsers */
+    background: linear-gradient(0deg, #FDB99B, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #cube {
     width:75%;
     height:75%;
 }
-.menuButton {
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     width:10em;
     height:4.4em;
-    background-image: radial-gradient(circle, #29b3dd 0%, #9b25c9 100%);
-    border:0;
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);
+    box-shadow: 0 0 0.5em rgb(25, 25, 25);
+    border:solid 0.1em;
+    border-color: rgba(0, 0, 0,50%);
+}
+#menuButtonR {
+    border-radius:0 2.5em 2.5em 0;
+}
+#menuButtonL {
+    border-radius: 2.5em 0 0 2.5em;
 
 }
-.menuButtonText {
+#menuButtonTextR {
     font-weight:bolder;
     font-size:1.5em;
+    color:aliceblue;
+    font-family:Josefin sans, sans-serif;
+    text-decoration: none;
+    background:none;
+    border:0
+}
+#menuButtonTextL {
+    font-weight:bolder;
+    font-size:1.5em;
+    color:aliceblue;
+    font-family:Josefin sans, sans-serif;
+    text-decoration: none;
+    background:none;
+    border:0
+}
+#rollButton {
+    border-radius: 1.5em;
+}
+#rollButtonText {
+    font-weight:bolder;
+    font-size:3em;
     color:aliceblue;
     font-family:Josefin sans, sans-serif;
     text-decoration: none;
@@ -126,13 +133,13 @@
     width:60vw;
     min-width:25em;
     border-radius:2em;
-    background: radial-gradient(circle, rgb(71, 211, 243) 0%, rgb(195, 66, 241) 100%)
+    background:black;
 }
 .smallerBox {
     display:flex;
     justify-content:left;
     align-items: center;
-    height:60%;
+    height:95%;
     width:65%;
     border-radius: 1em 0% 0% 1em;
     margin:2em;
@@ -145,7 +152,7 @@
     align-items: center;
     flex-direction:column;
     flex-wrap: wrap;
-    height:60%;
+    height:95%;
     width:30%;
     border-left:solid;
     border-color: black;
@@ -153,14 +160,14 @@
     border-radius: 0% 1em 1em 0%;
     margin:2em;
     margin-left:0;
-    background: radial-gradient(circle, rgb(231, 29, 117) 0%, rgb(59, 49, 242) 100%)
+    background:linear-gradient(to right, rgb(46, 46, 47)  0%, rgb(86, 86, 86) 11%,rgb(86, 86, 86) 91%, rgb(46, 46, 47)  100%);
 }
 #operSelect {
     margin:2%;
     height:100%;
     width:40%;
     border-radius:10%;
-    background: radial-gradient(circle,#edfaf4 60%, #9b25c9 100%);
+    background: radial-gradient(circle, #ffc700 50%, #fe6e00);
     border:2%;
     border-color:gray;
     font-weight:bolder;
@@ -173,13 +180,12 @@
     
     width:40%;
     border-radius:10%;
-    background: radial-gradient(circle,#0dee85 0%, #9b25c9 100%);
+    background: radial-gradient(circle, #ffc700 50%, #fe6e00);
     border:2%;
     border-color:gray;
     font-weight:bolder;
     color:rgb(0, 0, 0);
     text-align:center;
-    color:aliceblue;
 }
 
 #inputted {
@@ -187,7 +193,7 @@
     height:18%;
     width:80%;
     border-radius:10%;
-    background: radial-gradient(circle,#edfaf4 60%, #9b25c9 100%);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(205, 239, 249) 100%);
     border:2%;
     border-color:gray;
     font-weight:bolder;
@@ -205,11 +211,10 @@
     width:40%;
     min-width:6.8em;
     border-radius:10%;
-    background: radial-gradient(circle,#0dee85 0%, #9b25c9 100%);
+    background: radial-gradient(circle, #ffc700 50%, #fe6e00);
     border:2%;
     border-color:gray;
     font-weight:bolder;
-    color:aliceblue;
 }
 /*.rainbow-box {
     width: 7.5vw;
