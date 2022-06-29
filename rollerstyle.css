@@ -115,7 +115,7 @@
     font-weight:bolder;
     color:rgb(0, 0, 0);
     text-align:center;
-
+    cursor: pointer;
 }
 #b {
     background-color:#2b75ff;
@@ -218,6 +218,7 @@
     font-weight:bolder;
     color:rgb(0, 0, 0);
     text-align:center;
+    cursor: pointer;
 }
 #additionalRoll {
     margin:2%;
@@ -231,6 +232,7 @@
     font-weight:bolder;
     color:rgb(0, 0, 0);
     text-align:center;
+    cursor: pointer;
 }
 
 #inputted {
@@ -260,6 +262,7 @@
     border:2%;
     border-color:gray;
     font-weight:bolder;
+    cursor: pointer;
 }
 /*.rainbow-box {
     width: 7.5vw;
