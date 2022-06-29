@@ -39,8 +39,24 @@
                 <div id="rollButton" class="buttons">
                     <button onclick="getRandomIntInclusive(1, 6);" id="rollButtonText">Roll</button>
                 </div>
-                <div  id="calc" class="flexCenteredMarginTop">
-                        <button onclick="getRandomIntInclusive(1, 6);" style="background:none; border:0;cursor: pointer;padding:0"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                <div class="flexCentered" style="flex-direction:row;  align-items:center; width:100%; margin-top:1.5em"> 
+                    <div class="ebala">
+                        <p style="background:transparent"></p>
+                    </div>
+
+                    <div>
+                        <button onclick="getRandomIntInclusive(1, 6);" id="fon" style="background-color: radial-gradient(circle, #fdf6dc 50%, #f7dbc5); border-radius:4.5em; border:0;padding:0;width:25em;height:25em;"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                    </div>
+
+                    <div class="ebala">
+                        <select name="colorSelect" onchange="changeColor(this.value);" id="colorSelect">
+                            <option value="white" id="w">color</option>
+                            <option value="blue"id="b">blue</option>
+                            <option value="yellow"id="y">yellow</option>
+                            <option value="red"id="r">red</option>
+                            <option value="green"id="g">green</option>
+                        </select>
+                    </div>
                 </div>
                 
                 <div style="display:flex; justify-content:center;align-items:center;flex-direction:column; text-align: left; margin:0.5em">     

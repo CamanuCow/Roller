@@ -45,7 +45,7 @@
 
 #cube {
     width:25em;
-    height:25em;
+    height:25.2em;
 }
 .buttons {
     display: flex;
@@ -103,6 +103,42 @@
     width:10em;
     height:1.5em;
     cursor: pointer;
+}
+#colorSelect {
+    margin:2%;
+    height:100%;
+    width:5em;
+    border-radius:10%;
+    background: #fbf7ea;
+    border:2%;
+    border-color:gray;
+    font-weight:bolder;
+    color:rgb(0, 0, 0);
+    text-align:center;
+
+}
+#b {
+    background-color:#2b75ff;
+}
+#w {
+    background-color:white;
+}
+#r {
+    background-color:#ff007b;
+}
+#g {
+    background-color:#00ff6a;
+}
+#y {
+    background-color:#ffc800;
+}
+.ebala {
+    background:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:10em;
+    height:4.4em;
 }
 .flexCentered {
     display: flex;

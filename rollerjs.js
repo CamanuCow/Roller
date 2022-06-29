@@ -2,7 +2,29 @@ function dota() {
     const element = document.getElementById("rollButtonText");
     element.scrollIntoView(true);
 }
-
+function changeColor(color) {
+    if (color === "blue") {
+        document.getElementById("fon").style.backgroundColor = "#2b75ff";
+        document.getElementById("colorSelect").style.backgroundColor = "#2b75ff";
+    }
+    if (color === "red") {
+        document.getElementById("fon").style.backgroundColor = "#ff007b";
+        document.getElementById("colorSelect").style.backgroundColor = "#ff007b";
+    }
+    if (color === "green") {
+        document.getElementById("fon").style.backgroundColor = "#00ff6a";
+        document.getElementById("colorSelect").style.backgroundColor = "#00ff6a";
+    }
+    if (color === "yellow") {
+        document.getElementById("fon").style.backgroundColor = "#ffc800";
+        document.getElementById("colorSelect").style.backgroundColor = "#ffc800";
+    }
+    if (color === "white") {
+        document.getElementById("fon").style.backgroundColor = "white";
+        document.getElementById("colorSelect").style.backgroundColor = "white";
+    }
+    
+}
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
