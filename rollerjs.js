@@ -112,12 +112,12 @@ function changeSecondNumber(chislo) {
 function addValues() {
 
     if (sign == "+") {
-        var numero = parseInt(document.getElementById("firstNumber").innerHTML)
+        var numero = parseInt(document.getElementById("firstNumber").innerHTML);
         var customNumber = parseInt(vvod)//user input
         var gavno = (numero + customNumber);
         document.getElementById("end").innerHTML = gavno}
     if (sign == "*") {
-        var numero = Jopa;
+        var numero = parseInt(document.getElementById("firstNumber").innerHTML);
         var customNumber = parseInt(vvod) //user input
         var eblan = (numero * customNumber);
         document.getElementById("end").innerHTML = eblan
