@@ -39,12 +39,13 @@
     margin-right:auto;
     width:90%;
     height:100%;
-    background: #A770EF;  /* fallback for old browsers */
-    background: linear-gradient(0deg, #FDB99B, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #A770EF;
+    background: linear-gradient(0deg, #FDB99B, #A770EF);
+    overflow:hidden;
 }
 
 #cube {
-    width:25em;
+    width:25.2em;
     height:25.2em;
 }
 .buttons {
@@ -109,7 +110,7 @@
     height:100%;
     width:5em;
     border-radius:10%;
-    background: #fbf7ea;
+    background: white;
     border:2%;
     border-color:gray;
     font-weight:bolder;
@@ -137,8 +138,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width:10em;
+    width:5em;
     height:4.4em;
+    margin:1% /* Deleye if having problems on the main page  */
 }
 .flexCentered {
     display: flex;
@@ -167,6 +169,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction:row;
 }
 .biggerBox {
     display:flex;
@@ -264,6 +267,109 @@
     font-weight:bolder;
     cursor: pointer;
 }
+/* .btn:hover ~ #throw{ 
+    transform: translateX(200%) rotate(1turn) scale(0.5)
+} */
+#throw {
+    position: relative;
+    left:22%;
+    transition-property:transform, left, opacity;
+    transition-duration: 330ms;
+    transition-delay: 0;
+    overflow:visible;
+
+}
+#d20 {
+    margin-top:1.5em;
+    opacity:0.5;
+    position: relative;
+    left:22%;
+    transition-property: transform, left, opacity;
+    transition-duration: 330ms;
+    transition-delay: 0;
+    transform:scale(0.48);
+    overflow:visible;
+
+}
+#numberRolled {
+    position: absolute;
+    top:13%;
+    bottom:25%;
+    left:25%;
+    right:24%;
+    font-size:4.5em;
+    color:black;
+    cursor:default;
+}
+#numberRolled::selection {
+    background:transparent;
+}
+/* Stolen from https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin:1%;
+    margin-top:0;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(146, 143, 143);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(146, 143, 143);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(146, 143, 143);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
 /*.rainbow-box {
     width: 7.5vw;
     height: 100vh;

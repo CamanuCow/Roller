@@ -35,19 +35,13 @@
                             <li>If you've read this, click <span onclick="dota();" style="color:aliceblue;background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);border-radius: 10px;cursor: pointer;">"Get rolling"</span><br>above to get to action</li>
                         </ul>
                 </div>
-
-                <div id="rollButton" class="buttons">
-                    <button onclick="getRandomIntInclusive(1, 6);" id="rollButtonText">Roll</button>
-                </div>
-                <div class="flexCentered" style="flex-direction:row;  align-items:center; width:100%; margin-top:1.5em"> 
-                    <div class="ebala">
-                        <p style="background:transparent"></p>
-                    </div>
-
-                    <div>
-                        <button onclick="getRandomIntInclusive(1, 6);" id="fon" style="background-color: radial-gradient(circle, #fdf6dc 50%, #f7dbc5); border-radius:4.5em; border:0;padding:0;width:25em;height:25em;cursor: pointer;"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
-                    </div>
-
+                <p id="scrollHere" style="font-size:2em;margin:0.3em;margin-top:0">Switch dice & color:</p>
+                <div style="display:flex;flex-direction:row; justify-content:center; align-items: center;margin:2%;margin-top:0">
+                    
+                    <label class="switch" id="scrollHere">
+                        <input type="checkbox" id="btn" onchange="swap();">
+                        <span class="slider round"></span>
+                    </label>
                     <div class="ebala">
                         <select name="colorSelect" onchange="changeColor(this.value);" id="colorSelect">
                             <option value="white" id="w">color</option>
@@ -58,15 +52,30 @@
                         </select>
                     </div>
                 </div>
-                
-                <div style="display:flex; justify-content:center;align-items:center;flex-direction:column; text-align: left; margin:0.5em">     
-                    <p style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong>
-                        <ol style="font-size:larger; font-weight:bolder;margin:0">
-                            <li>Roll by clicking the die above or the "Roll" button below</li>
-                            <li>Choose an operator</li>
-                            <li>Enter your number</li>
-                            <li>Press "Calculate" to see the result!</li>
-                        </ol>
+                <div style="display:flex; flex-direction:row; justify-content:center; overflow:visible;">
+                    <div id="throw">
+                        <button onclick="getRandomIntInclusive(1, 6);" id="fon" style="background-color: radial-gradient(circle, #fdf6dc 50%, #f7dbc5); border-radius:4.5em; border:0;padding:0;width:25em;height:25em;"><img id="cube" src="Res/Side6D6.png" title="Roll to Roll" alt="Xyerror"></button>
+                    </div>
+                    <div id="d20">
+                        <img style="position: absolute;border-radius: 37%;" src="Res/unknown.png" title="Roll to Roll" alt="Xyerror" onclick="getRandomIntD20(1, 20); ">
+                        <p onclick="getRandomIntD20(1, 20);" id="numberRolled">20</p>
+                        <svg height="293" width="259">
+                            <polygon id="fon20" points="126.3,2.6 5.3,73.84 4.3,216.32 126.3,291 255.3,218 255.3,73.84" style="fill:white;fill-rule:evenodd;"/>
+                        </svg>
+                    </div>
+
+                </div>
+                <div style="display:flex; flex-direction:row;align-items: baseline;">
+                    <p style="font-size:larger; font-weight:bolder"><strong>CALCULATOR:</strong></p>
+                    <button onclick="hideInfo()" style="opacity:0.8;border:0;background:transparent;color:blue;cursor:pointer;height:1em;text-decoration: underline;font-size:medium">Instructions</button>
+                </div>
+                <div id="instructions" style="display:none; justify-content:center;align-items:center;flex-direction:column; text-align: left; margin:0.5em">
+                    <ol style="font-size:larger; font-weight:bolder;margin:0">
+                        <li>Roll by clicking the die above or the "Roll" button below</li>
+                        <li>Choose an operator</li>
+                        <li>Enter your number</li>
+                        <li>Press "Calculate" to see the result!</li>
+                    </ol>
                 </div>
 
                 <div class="forCalc">
@@ -89,7 +98,7 @@
                             <div style="display:flex; flex-direction:row; justify-content:center; width:95%">
                                 <button onclick="getRandomIntInclusive(1, 6);" id="additionalRoll">Roll</button>
                                 <select name="operSelect" onchange="updateOp(this.value);" id="operSelect">
-                                    <option value="null">? ? ?</option>
+                                    <option value="null">+ / *</option>
                                     <option value="+">+</option>
                                     <option value="*">*</option>
                                 </select>

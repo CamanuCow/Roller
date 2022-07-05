@@ -1,26 +1,32 @@
 function dota() {
-    const element = document.getElementById("rollButtonText");
+    const element = document.getElementById("scrollHere");
     element.scrollIntoView(true);
 }
 function changeColor(color) {
     if (color === "blue") {
         document.getElementById("fon").style.backgroundColor = "#2b75ff";
+        document.getElementById("fon20").style.fill = "#2b75ff";
         document.getElementById("colorSelect").style.backgroundColor = "#2b75ff";
+        document.getElementById("numberRolled").style.color = "white"
     }
     if (color === "red") {
         document.getElementById("fon").style.backgroundColor = "#ff007b";
+        document.getElementById("fon20").style.fill = "#ff007b";
         document.getElementById("colorSelect").style.backgroundColor = "#ff007b";
     }
     if (color === "green") {
         document.getElementById("fon").style.backgroundColor = "#00ff6a";
+        document.getElementById("fon20").style.fill = "#00ff6a";
         document.getElementById("colorSelect").style.backgroundColor = "#00ff6a";
     }
     if (color === "yellow") {
         document.getElementById("fon").style.backgroundColor = "#ffc800";
+        document.getElementById("fon20").style.fill = "#ffc800";
         document.getElementById("colorSelect").style.backgroundColor = "#ffc800";
     }
     if (color === "white") {
         document.getElementById("fon").style.backgroundColor = "white";
+        document.getElementById("fon20").style.fill = "white";
         document.getElementById("colorSelect").style.backgroundColor = "white";
     }
     
@@ -55,6 +61,21 @@ function getRandomIntInclusive(min, max) {
     return Jopa;
     
 }
+function getRandomIntD20(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    Khuy = Math.floor(Math.random() * (max - min + 1) + min);
+    document.getElementById("numberRolled").innerHTML = Khuy
+    document.getElementById("firstNumber").innerHTML = Khuy
+    document.getElementById("end").innerHTML = "Result"
+    if (Khuy == 20) {
+        document.getElementById("numberRolled").style.textDecoration = "underline"
+    }
+    else {
+        document.getElementById("numberRolled").style.textDecoration = "none"
+    }
+
+}
 //RUN WHEN SELECTED + OR *
 function updateOp(val) {
     if (val === "+") {
@@ -87,7 +108,7 @@ function changeSecondNumber(chislo) {
 function addValues() {
 
     if (sign == "+") {
-        var numero = Jopa;
+        var numero = parseInt(document.getElementById("firstNumber").innerHTML)
         var customNumber = parseInt(vvod)//user input
         var gavno = (numero + customNumber);
         document.getElementById("end").innerHTML = gavno}
@@ -98,4 +119,36 @@ function addValues() {
         document.getElementById("end").innerHTML = eblan
         }
     }
+function swap() {
+    
+    if (document.getElementById("btn").checked ) {
+        document.getElementById("d20").style.left = "0"
+        document.getElementById("throw").style.left = "0"
+        document.getElementById("throw").style.transform = "translateX(-50%) scale(0.4)"
+        document.getElementById("throw").style.opacity = "0.5"
+        document.getElementById("d20").style.transform = "translateX(-65%) scale(1.1)"
+        document.getElementById("d20").style.opacity = "1"
+        document.getElementById("additionalRoll").setAttribute("onclick", "getRandomIntD20(1, 20)")
+    }
+    else {
+        document.getElementById("throw").style.left = "22%"
+        document.getElementById("d20").style.left = "22%"
+        document.getElementById("throw").style.transform = "scale(1) translateX(0)"
+        document.getElementById("throw").style.opacity = "1"
+        document.getElementById("d20").style.transform = "translateX(0) scale(0.48)"
+        document.getElementById("d20").style.opacity = "0.5"
+        document.getElementById("additionalRoll").setAttribute("onclick", "getRandomIntInclusive(1, 6)")
+
+
+    }
+        
+}
+function hideInfo() {
+    var hidden = document.getElementById("instructions");
+    if (hidden.style.display === "none") {
+      hidden.style.display = "block";
+    } else {
+      hidden.style.display = "none";
+    }
+  }
 
