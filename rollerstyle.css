@@ -4,18 +4,21 @@
     text-align: center;
     background:linear-gradient(
         90deg,
-        rgba(255, 0, 0, 1) 0%,
-        rgba(255, 154, 0, 1) 10%,
-        rgba(208, 222, 33, 1) 20%,
-        rgba(79, 220, 74, 1) 30%,
-        rgba(63, 218, 216, 1) 40%,
-        rgba(47, 201, 226, 1) 50%,
-        rgba(28, 127, 238, 1) 60%,
-        rgba(95, 21, 242, 1) 70%,
-        rgba(186, 12, 248, 1) 80%,
-        rgba(251, 7, 217, 1) 90%,
-        rgba(255, 0, 0, 1) 100%);
-    background-size: 5% 100%;
+        #4f1100 0%,
+        #751700 7.5%,
+        #651a03 20%,
+        #651a03 27.5%,
+        #751700 32.5%,
+        #751700 42.5%,
+        #f7b916 47.5%,
+        #f7b916 50%,
+        #751700 57.5%,
+        #751700 67.5%,
+        #651a03 72.5%,
+        #651a03 80%,
+        #751700 92.5%,
+        #4f1100 100%);
+    background-size: 10% 100%;
     background-repeat:repeat;
     font-family:Josefin sans, sans-serif;
 
@@ -26,7 +29,7 @@
     margin:0;
     padding:0;
     height: 100%;
-    width:100%;
+    width:90%;
     display: flex;
     justify-content: center;
 
@@ -39,8 +42,8 @@
     margin-right:auto;
     width:90%;
     height:100%;
-    background: #A770EF;
-    background: linear-gradient(0deg, #FDB99B, #A770EF);
+    background: #0d6d3f;
+    background-image: url(Res/GreenBckgrd.jpg);
     overflow:hidden;
 }
 
@@ -54,7 +57,15 @@
     align-items: center;
     width:10em;
     height:4.4em;
-    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);
+    background-image:linear-gradient(
+        0deg,
+        #4f1100 0%,
+        #751700 25%,
+        #651a03 30%,
+        #651a03 70%,
+        #751700 75%,
+        #751700 95%,
+        #4f1100 100%);
     box-shadow: 0 0 0.5em rgb(25, 25, 25);
     border:solid 0.1em;
     border-color: rgba(0, 0, 0,50%);
@@ -71,7 +82,7 @@
 #menuButtonTextR {
     font-weight:bolder;
     font-size:1.5em;
-    color:aliceblue;
+    color:rgb(220, 252, 229);
     font-family:Josefin sans, sans-serif;
     text-decoration: none;
     background:none;
@@ -81,7 +92,7 @@
 #menuButtonTextL {
     font-weight:bolder;
     font-size:1.5em;
-    color:aliceblue;
+    color:rgb(220, 252, 229);
     font-family:Josefin sans, sans-serif;
     text-decoration: none;
     background:none;
@@ -96,7 +107,7 @@
 #rollButtonText {
     font-weight:bolder;
     font-size:3em;
-    color:aliceblue;
+    color:rgb(220, 252, 229);
     font-family:Josefin sans, sans-serif;
     text-decoration: none;
     background:none;
@@ -182,6 +193,7 @@
     min-width:25em;
     border-radius:2em;
     background:black;
+    margin-bottom:0.5em;
 }
 .smallerBox {
     display:flex;
@@ -330,7 +342,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(146, 143, 143);
+    background-color: rgb(103, 127, 105);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -348,11 +360,11 @@
   }
   
   input:checked + .slider {
-    background-color: rgb(146, 143, 143);
+    background-color: rgb(103, 127, 105);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px rgb(146, 143, 143);
+    box-shadow: 0 0 1px rgb(103, 127, 105);
   }
   
   input:checked + .slider:before {
@@ -369,7 +381,9 @@
   .slider.round:before {
     border-radius: 50%;
   }
-
+a:visited {
+    color:rgb(130, 177, 169);
+}
 /*.rainbow-box {
     width: 7.5vw;
     height: 100vh;
