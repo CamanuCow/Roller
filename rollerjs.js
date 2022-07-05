@@ -7,27 +7,31 @@ function changeColor(color) {
         document.getElementById("fon").style.backgroundColor = "#2b75ff";
         document.getElementById("fon20").style.fill = "#2b75ff";
         document.getElementById("colorSelect").style.backgroundColor = "#2b75ff";
-        document.getElementById("numberRolled").style.color = "white"
+        document.getElementById("numberRolled").style.color = "white";
     }
     if (color === "red") {
         document.getElementById("fon").style.backgroundColor = "#ff007b";
         document.getElementById("fon20").style.fill = "#ff007b";
         document.getElementById("colorSelect").style.backgroundColor = "#ff007b";
+        document.getElementById("numberRolled").style.color = "black";
     }
     if (color === "green") {
         document.getElementById("fon").style.backgroundColor = "#00ff6a";
         document.getElementById("fon20").style.fill = "#00ff6a";
         document.getElementById("colorSelect").style.backgroundColor = "#00ff6a";
+        document.getElementById("numberRolled").style.color = "black";
     }
     if (color === "yellow") {
         document.getElementById("fon").style.backgroundColor = "#ffc800";
         document.getElementById("fon20").style.fill = "#ffc800";
         document.getElementById("colorSelect").style.backgroundColor = "#ffc800";
+        document.getElementById("numberRolled").style.color = "black";
     }
     if (color === "white") {
         document.getElementById("fon").style.backgroundColor = "white";
         document.getElementById("fon20").style.fill = "white";
         document.getElementById("colorSelect").style.backgroundColor = "white";
+        document.getElementById("numberRolled").style.color = "black";
     }
     
 }
